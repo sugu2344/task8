@@ -119,3 +119,10 @@ GROUP BY customers.id;
 update products set price=45 where id=3;
 select * from products;
 ```
+
+
+ #### 4) Add a new column discount to the products table. 
+ ```sql
+ alter table products add column discount int;
+select * from products;
+```
