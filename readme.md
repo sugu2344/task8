@@ -104,10 +104,18 @@ where order_date >=curdate()- interval 30 day;
 ```
 
  #### 2) Get the total amount of all orders placed by each customer.
- 
+
  ```sql
  SELECT customers.id, customers.name, customers.email, customers.address, SUM(orders.total_amount) AS Total_amount
 FROM customers
 JOIN orders ON customers.id = orders.customer_id
 GROUP BY customers.id;
+```
+
+ #### 3) Update the price of Product C to 45.00.
+ 
+ ```sql
+ select * from products;
+update products set price=45 where id=3;
+select * from products;
 ```
