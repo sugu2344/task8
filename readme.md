@@ -161,10 +161,11 @@ WHERE products.name = 'Product a';
 
    ```
  #### 8) Retrieve the orders with a total amount greater than 150.00.
-    ```sql
+
+ ```sql
 select * from orders
 where total_amount >150;
-   ```
+ ```
 
 
 
