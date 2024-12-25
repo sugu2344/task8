@@ -40,6 +40,7 @@ create table  orders(id int primary key auto_increment,customer_id int reference
 
 desc orders;
 ```
+
 - #### orders table Data.
 
 ```sql
@@ -58,6 +59,7 @@ insert into orders values
 (12,10,"2024-11-10",173);
 select * from orders;
 ```
+
 - #### products Table
 
 ```sql
@@ -65,6 +67,7 @@ create table products(id int primary key auto_increment,name varchar(20),price i
 
 desc products;
 ```
+
 - #### Products table Data.
 
 ```sql
@@ -80,10 +83,22 @@ select * from products;
 ```
 
 - #### view table with data.
+
 ```sql
 select * from products;
 select * from orders;
 select * from customers;
 ```
 
+# **Queries **
 
+- #### 1) Retrieve all customers who have placed an order in the last 30 days.
+
+
+```sql
+select distinct customers.id, customers.name,customers.email,customers.address
+from customers 
+join orders 
+on customers.id = orders.customer_id
+where order_date >=curdate()- interval 30 day;
+```
