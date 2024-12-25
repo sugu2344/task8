@@ -15,6 +15,24 @@ create table customers(id int primary key auto_increment,name varchar(20),email 
 desc customers;
 ```
 
+- #### Customers table Data.
+
+```sql
+
+insert into customers values
+(1,"suganesh","suganesh@gmail.com","namakkal"),
+(2,"naveen","naveen@gmail.com","salem"),
+(3,"gokul","gokul@gmail.com","erode"),
+(4,"vignesh","vignesh@gmail.com","namakkal"),
+(5,"tamil","tamil@gmail.com","chennai"),
+(6,"soundar","soundar@gmail.com","chennai"),
+(7,"shankar","shankar@gmail.com","namakkal"),
+(8,"muthu","muthu@gmail.com","karraikudi"),
+(9,"vijay","vijay@gmail.com","karraikudi"),
+(10,"sasi","sasi@gmail.com","salem");
+select * from customers;
+```
+
 - #### orders Table
 
 ```sql
