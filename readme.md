@@ -92,7 +92,7 @@ select * from customers;
 
 # **Queries **
 
-- #### 1) Retrieve all customers who have placed an order in the last 30 days.
+ #### 1) Retrieve all customers who have placed an order in the last 30 days.
 
 
 ```sql
@@ -101,4 +101,13 @@ from customers
 join orders 
 on customers.id = orders.customer_id
 where order_date >=curdate()- interval 30 day;
+```
+
+ #### 2) Get the total amount of all orders placed by each customer.
+ 
+ ```sql
+ SELECT customers.id, customers.name, customers.email, customers.address, SUM(orders.total_amount) AS Total_amount
+FROM customers
+JOIN orders ON customers.id = orders.customer_id
+GROUP BY customers.id;
 ```
