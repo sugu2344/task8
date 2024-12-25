@@ -92,52 +92,52 @@ select * from customers;
 
 # **Queries **
 
- #### 1) Retrieve all customers who have placed an order in the last 30 days.
-
+#### 1) Retrieve all customers who have placed an order in the last 30 days.
 
 ```sql
 select distinct customers.id, customers.name,customers.email,customers.address
-from customers 
-join orders 
+from customers
+join orders
 on customers.id = orders.customer_id
 where order_date >=curdate()- interval 30 day;
 ```
 
- #### 2) Get the total amount of all orders placed by each customer.
+#### 2) Get the total amount of all orders placed by each customer.
 
- ```sql
- SELECT customers.id, customers.name, customers.email, customers.address, SUM(orders.total_amount) AS Total_amount
+```sql
+SELECT customers.id, customers.name, customers.email, customers.address, SUM(orders.total_amount) AS Total_amount
 FROM customers
 JOIN orders ON customers.id = orders.customer_id
 GROUP BY customers.id;
 ```
 
- #### 3) Update the price of Product C to 45.00.
- 
- ```sql
- select * from products;
+#### 3) Update the price of Product C to 45.00.
+
+```sql
+select * from products;
 update products set price=45 where id=3;
 select * from products;
 ```
 
+#### 4) Add a new column discount to the products table.
 
- #### 4) Add a new column discount to the products table. 
- ```sql
- alter table products add column discount int;
+```sql
+alter table products add column discount int;
 select * from products;
 ```
 
+#### 5) Retrieve the top 3 products with the highest price.
 
- #### 5) Retrieve the top 3 products with the highest price.
- ```sql
- select * from products;
+```sql
+select * from products;
 select * from products order by price desc limit 3;
 ```
 
 #### 6) Get the names of customers who have ordered Product A.
- ```sql
- -- table list
- select * from customers;
+
+```sql
+-- table list
+select * from customers;
 select * from products;
 select * from orders;
 select * from order_items;
@@ -151,12 +151,20 @@ WHERE products.name = 'Product a';
 ```
 
 #### 7) Join the orders and customers tables to retrieve the customer's name and order date for each order.
- ```sql
-  select orders.id as order_id ,customers.name as customer_Name,orders.order_date
-    from orders
-    join customers
-    ON 
-    customers.id = orders.customer_id;
-    ```
+
+```sql
+ select orders.id as order_id ,customers.name as customer_Name,orders.order_date
+   from orders
+   join customers
+   ON
+   customers.id = orders.customer_id;
+
+   ```
+ #### 8) Retrieve the orders with a total amount greater than 150.00.
+    ```sql
+select * from orders
+where total_amount >150;
+   ```
+
 
 
