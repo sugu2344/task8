@@ -89,7 +89,8 @@ select * from products;
 select * from orders;
 select * from customers;
 ```
-<img src="https://example.com/image.png" alt="Sample Image" width="300">
+<img src="![query 1](https://github.com/user-attachments/assets/eccb3fba-5898-4dd8-a051-1ab25e9656c8)
+" alt="Sample Image" width="300">
 
 
 # **Queries **
