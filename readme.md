@@ -133,3 +133,17 @@ select * from products;
  select * from products;
 select * from products order by price desc limit 3;
 ```
+
+#### 6) Get the names of customers who have ordered Product A.
+ ```sql
+ select * from customers;
+select * from products;
+select * from orders;
+
+SELECT DISTINCT customers.name
+FROM customers
+JOIN orders ON customers.id = orders.customer_id
+JOIN order_items ON orders.id = order_items.order_id
+JOIN products ON products.id = order_items.product_id
+WHERE products.name = 'Product a';
+```
