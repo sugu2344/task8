@@ -89,6 +89,8 @@ select * from products;
 select * from orders;
 select * from customers;
 ```
+<img src="https://example.com/image.png" alt="Sample Image" width="300">
+
 
 # **Queries **
 
