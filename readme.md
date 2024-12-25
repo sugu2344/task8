@@ -126,3 +126,10 @@ select * from products;
  alter table products add column discount int;
 select * from products;
 ```
+
+
+ #### 5) Retrieve the top 3 products with the highest price.
+ ```sql
+ select * from products;
+select * from products order by price desc limit 3;
+```
