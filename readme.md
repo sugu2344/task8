@@ -136,9 +136,11 @@ select * from products order by price desc limit 3;
 
 #### 6) Get the names of customers who have ordered Product A.
  ```sql
+ -- table list
  select * from customers;
 select * from products;
 select * from orders;
+select * from order_items;
 
 SELECT DISTINCT customers.name
 FROM customers
@@ -147,3 +149,12 @@ JOIN order_items ON orders.id = order_items.order_id
 JOIN products ON products.id = order_items.product_id
 WHERE products.name = 'Product a';
 ```
+
+#### 7) Join the orders and customers tables to retrieve the customer's name and order date for each order.
+ ```sql
+  select orders.id as order_id ,customers.name as customer_Name,orders.order_date
+    from orders
+    join customers
+    ON 
+    customers.id = orders.customer_id;
+    ```
