@@ -158,3 +158,10 @@ WHERE products.name = 'Product a';
     ON 
     customers.id = orders.customer_id;
     ```
+
+    #### 8) Retrieve the orders with a total amount greater than 150.00.
+    
+    ```sql
+ select * from orders
+where total_amount >150;
+```
