@@ -167,5 +167,20 @@ select * from orders
 where total_amount >150;
  ```
 
+  #### 9) Normalize the database by creating a separate table for order items and updating the orders table to reference the order_items table.
+
+   ```sql
+   CREATE TABLE order_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    foreign key (order_id) references orders(id),
+    foreign key (product_id) references products(id)
+);
+desc order_items;
+select * from order_items;
+```
+
+
 
 
