@@ -40,7 +40,24 @@ create table  orders(id int primary key auto_increment,customer_id int reference
 
 desc orders;
 ```
+- #### orders table Data.
 
+```sql
+insert into orders values
+(1,1,"2024-10-2",50),
+(2,2,"2024-10-12",150),
+(3,1,"2024-11-6",200),
+(4,5,"2024-11-28",350),
+(5,5,"2024-10-25",333),
+(6,8,"2024-12-5",99),
+(7,4,"2024-12-11",66),
+(8,3,"2024-11-28",73),
+(9,6,"2024-12-21",64),
+(10,6,"2024-12-9",82),
+(11,7,"2024-11-30",100),
+(12,10,"2024-11-10",173);
+select * from orders;
+```
 - #### products Table
 
 ```sql
@@ -48,3 +65,25 @@ create table products(id int primary key auto_increment,name varchar(20),price i
 
 desc products;
 ```
+- #### Products table Data.
+
+```sql
+insert into products values
+(1,"product A",111,"electronics"),
+(2,"product B",222,"groceries"),
+(3,"product c",100,"vegetables"),
+(4,"product d",555,"cloths"),
+(5,"product e",666,"furnuiture"),
+(6,"product c",444,"vechies");
+select * from products;
+
+```
+
+- #### view table with data.
+```sql
+select * from products;
+select * from orders;
+select * from customers;
+```
+
+
