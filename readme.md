@@ -1,6 +1,6 @@
 # **Sql Task**
 
--## Create a database named ecommerce.
+## Create a database named ecommerce.
 
 ```sql
 create database ecommerce;
