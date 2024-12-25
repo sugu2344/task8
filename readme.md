@@ -180,7 +180,12 @@ where total_amount >150;
 desc order_items;
 select * from order_items;
 ```
+ #### 10) Retrieve the average total of all orders.
 
+   ```sql
+   SELECT AVG(total_amount) as average_total
+FROM orders;
+```
 
 
 
